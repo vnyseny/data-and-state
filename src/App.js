@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import TaskContext from "./Hooks/TaskContext";
+import Tasks from "./Tasks";
+import React from "react";
 
+var taskList = [
+  {
+    id: 1,
+    desc: "Breakfast",
+    isDone: false,
+  },
+  {
+    id: 2,
+    desc: "Bath",
+    isDone: false,
+  },
+  {
+    id: 3,
+    desc: "Plan week's work and send",
+    isDone: false,
+  },
+
+];
 function App() {
+  const taskState = React.useState(taskList);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TaskContext.Provider value={taskState} >
+      <Tasks />
+      </TaskContext.Provider>
     </div>
   );
 }

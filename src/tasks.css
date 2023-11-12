@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.pl10 {
+    padding-left: 10px;
+}
+
+summary::marker {
+    content: "👉";
+}
+
+summary {
+    background-color: #00416A;
+}
+
+.w200 {
+    min-width: 200px;
+    width: fit-content;
+    font-size: x-large;
+}
+
+details[open] summary::marker {
+    content: "👇";
+}
+
+details {
+    background: #0071c5;
+    color: whitesmoke;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task>input[type='checkbox'] {
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 20px;
+}

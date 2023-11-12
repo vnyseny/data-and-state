@@ -34,5 +34,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vnyseny/react-basics.git"
+  },
+  "author": "Vinay",
+  "license": "ISC"
 }
